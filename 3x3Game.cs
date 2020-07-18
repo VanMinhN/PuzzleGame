@@ -13,9 +13,11 @@ namespace WindowsFormsApp1
 {
     public partial class _3x3Game : Form
     {
+        private double _tick = 0;
         public _3x3Game()
         {
             InitializeComponent();
+            timer1.Start();
 			this.BackgroundImage = Properties.Resources.background_image;
             this.BackgroundImageLayout = ImageLayout.Stretch; //Fit the image to the window app
         }
@@ -38,7 +40,7 @@ namespace WindowsFormsApp1
             // return true if inversion count is even. 
             return (invCount % 2 == 0);
         }
-        int moveNumber = 0;
+        protected int moveNumber = 0, TotalScore = 10000;
         private void ShuffleB()
         {
             List<int> labelList = new List<int>();
@@ -133,7 +135,15 @@ namespace WindowsFormsApp1
              if(button1.Text=="1" && button2.Text=="2" && button3.Text=="3"
                && button4.Text=="4" && button5.Text=="5" && button6.Text=="6"
                && button7.Text=="7" && button8.Text=="8" && button9.Text==""){
-                MessageBox.Show("Well Play! You beat the game. And you did it in "+moveNumber+" moves.");
+                var time = TimeSpan.FromSeconds(_tick);
+                int hours = time.Hours;
+                int mins = time.Minutes;
+                int ss = time.Seconds;
+                string ft = string.Format("{0:00}:{1:00}:{2:00}", hours, mins, ss); //Better format
+                _tick = 0; //reset the tick
+               MessageBox.Show("Well Play! You beat the game. And you did it in " + moveNumber +
+                " moves." + "\n\n\t\t       Score: " + (TotalScore - (moveNumber * 25)) + 
+                "\n\n\t\t       TIME: "+ft);
                 ShuffleB();
              }       
         }
@@ -145,10 +155,16 @@ namespace WindowsFormsApp1
 
         private void Menu_Click(object sender, EventArgs e)
         {
+            timer1.Stop(); //Stop the timer when exit the time and Go to Menu
             this.Hide();
             Form1 f = new Form1();
             f.Closed += (s, args) => this.Close();
             f.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            _tick++;
         }
 
         private void _3x3Game_Load(object sender, EventArgs e)

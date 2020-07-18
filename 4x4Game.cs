@@ -12,13 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class _4x4Game : Form
     {
+        private double _tick = 0;
         public _4x4Game()
         {
             InitializeComponent();
+            timer1.Start();
 			this.BackgroundImage = Properties.Resources.background_image;
             this.BackgroundImageLayout = ImageLayout.Stretch; //Fit the image to the window app
         }
-        int moveNumber = 0;
+        protected int moveNumber = 0, TotalScore = 10000;
 
         private static bool isSolvable(List<int> puzzle)
         {
@@ -151,7 +153,15 @@ namespace WindowsFormsApp1
               && button10.Text == "10" && button11.Text == "11" && button12.Text == "12" 
               && button13.Text == "13" && button14.Text == "14" && button15.Text == "15" && button16.Text == "")
             {
-                MessageBox.Show("Well Play! You beat the game. And you did it in " + moveNumber + " moves.");
+                var time = TimeSpan.FromSeconds(_tick);
+                int hours = time.Hours;
+                int mins = time.Minutes;
+                int ss = time.Seconds;
+                string ft = string.Format("{0:00}:{1:00}:{2:00}", hours, mins, ss); //Better format
+                _tick = 0; //reset the tick
+                MessageBox.Show("Well Play! You beat the game. And you did it in " + moveNumber +
+                 " moves." + "\n\n\t\t       Score: " + (TotalScore - (moveNumber * 25)) +
+                 "\n\n\t\t       TIME: " + ft);
                 ShuffleB();
             }
         }
@@ -163,6 +173,7 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             this.Hide();
             Form1 f = new Form1();
             f.Closed += (s, args) => this.Close();
@@ -172,6 +183,11 @@ namespace WindowsFormsApp1
         private void _4x4Game_Load(object sender, EventArgs e)
         {
             ShuffleB();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            _tick++;
         }
     }
 }
