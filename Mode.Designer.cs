@@ -30,6 +30,7 @@
         {
             this.EasyMode = new System.Windows.Forms.Button();
             this.NormalMode = new System.Windows.Forms.Button();
+            this.HardModeB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EasyMode
@@ -54,12 +55,24 @@
             this.NormalMode.UseVisualStyleBackColor = true;
             this.NormalMode.Click += new System.EventHandler(this.NormalMode_Click);
             // 
+            // HardModeB
+            // 
+            this.HardModeB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.HardModeB.Location = new System.Drawing.Point(310, 271);
+            this.HardModeB.Name = "HardModeB";
+            this.HardModeB.Size = new System.Drawing.Size(145, 65);
+            this.HardModeB.TabIndex = 2;
+            this.HardModeB.Text = "Hard";
+            this.HardModeB.UseVisualStyleBackColor = true;
+            this.HardModeB.Click += new System.EventHandler(this.HardModeB_Click);
+            // 
             // Mode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HardModeB);
             this.Controls.Add(this.NormalMode);
             this.Controls.Add(this.EasyMode);
             this.Name = "Mode";
@@ -73,5 +86,6 @@
 
         private System.Windows.Forms.Button EasyMode;
         private System.Windows.Forms.Button NormalMode;
+        private System.Windows.Forms.Button HardModeB;
     }
 }

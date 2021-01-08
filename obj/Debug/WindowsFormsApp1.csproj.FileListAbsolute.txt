@@ -11,3 +11,4 @@ C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.cspro
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1._4x4Game.resources
+C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1._5x5Game.resources

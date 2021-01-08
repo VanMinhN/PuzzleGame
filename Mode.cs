@@ -34,5 +34,13 @@ namespace WindowsFormsApp1
             game.Closed += (s, args) => this.Close();
             game.Show();
         }
+
+        private void HardModeB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _5x5Game game = new _5x5Game();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
     }
 }

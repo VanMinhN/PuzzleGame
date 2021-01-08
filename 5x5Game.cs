@@ -8,49 +8,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace WindowsFormsApp1
 {
-    public partial class _3x3Game : Form
+    public partial class _5x5Game : Form
     {
         private double _tick = 0;
-        public _3x3Game()
+        public _5x5Game()
         {
             InitializeComponent();
             timer1.Start();
-			this.BackgroundImage = Properties.Resources.background_image;
+            this.BackgroundImage = Properties.Resources.background_image;
             this.BackgroundImageLayout = ImageLayout.Stretch; //Fit the image to the window app
         }
-        protected int moveNumber = 0, TotalScore = 10000;
+        private int moveNumber = 0, TotalScore = 10000;
+        //ShuffleNutton newGame
         private void ShuffleB()
         {
             List<int> labelList = new List<int>();
-
             Random rad = new Random();
             bool flag = true;
-            int labelIndex;
+            int number;
             while (flag)
             {
-                //initialize number into List
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < 25; i++)
                 {
-                    do{ labelIndex = rad.Next(9); 
-                    }while (labelList.Contains(labelIndex)); //Check the repeated number
-                    labelList.Add(labelIndex); //add number if it is not repeated
+                    do { number = rad.Next(25); } while (labelList.Contains(number));
+                    labelList.Add(number);
                 }
-                //If solvable then flag become false and exit the while Loop.
-                if (SolveMethod.isSolvable(labelList)) { flag = false; } //Check
-                else { labelList.Clear(); } //Fail then clear the List
+                if (SolveMethod.isSolvable(labelList)) { flag = false; }
+                else { labelList.Clear(); }
             }
-            int index1 = 0;
+            int index = 0;
             foreach (Button btn in this.panel1.Controls)
             {
-                btn.Text = (labelList[index1] == 0) ? "" : labelList[index1].ToString(); //if the number is 0 then make it empty
+                btn.Text = (labelList[index] == 0) ? "" : labelList[index] + "";
                 btn.BackColor = (btn.Text == "") ? Color.White : Color.FromKnownColor(KnownColor.ControlLight); //if the button is empty then color it white
-                index1++;
+                index++;
             }
+
             moveNumber = 0;
-            NoOfMovements.Text = "Move#: " + moveNumber;
+            label1.Text = "Move#: " + moveNumber;
         }
         private void SwapNumber(Object sender, EventArgs e)
         {
@@ -59,38 +56,38 @@ namespace WindowsFormsApp1
             Button whiteBtn = null;
             foreach (Button bt in this.panel1.Controls)
             {
-                if(bt.Text == "")
+                if (bt.Text == "")
                 {
                     whiteBtn = bt;
                     break;
                 }
             }
-            if ((btn.TabIndex == 6 || btn.TabIndex == 3) && btn.TabIndex == (whiteBtn.TabIndex + 1))
+            if ((btn.TabIndex == 5 || btn.TabIndex == 10 || btn.TabIndex == 15 || btn.TabIndex==20) && btn.TabIndex == (whiteBtn.TabIndex + 1))
             {
 
             }
-            else if ((btn.TabIndex == 5 || btn.TabIndex == 2) && btn.TabIndex == (whiteBtn.TabIndex-1))
+            else if ((btn.TabIndex == 4 || btn.TabIndex == 9 || btn.TabIndex == 14 ||btn.TabIndex==19) && btn.TabIndex == (whiteBtn.TabIndex - 1))
             {
 
             }
-            else if (btn.TabIndex == (whiteBtn.TabIndex -1) ||
-                btn.TabIndex == (whiteBtn.TabIndex - 3) ||
-                btn.TabIndex == (whiteBtn.TabIndex + 3) ||
-                btn.TabIndex == (whiteBtn.TabIndex + 1) )
+            else if (btn.TabIndex == (whiteBtn.TabIndex - 1) ||
+                btn.TabIndex == (whiteBtn.TabIndex - 5) ||
+                btn.TabIndex == (whiteBtn.TabIndex + 5) ||
+                btn.TabIndex == (whiteBtn.TabIndex + 1))
             {
-                 whiteBtn.BackColor = Color.FromKnownColor(KnownColor.ControlLight);
-                 btn.BackColor = Color.White;
-                 whiteBtn.Text = btn.Text;
-                 btn.Text = "";
-                 moveNumber++;
-                 NoOfMovements.Text = "Move#: " + moveNumber;
+                whiteBtn.BackColor = Color.FromKnownColor(KnownColor.ControlLight);
+                btn.BackColor = Color.White;
+                whiteBtn.Text = btn.Text;
+                btn.Text = "";
+                moveNumber++;
+                label1.Text = "Move#: " + moveNumber;
             }
             CheckWin();
         }
 
         private void CheckWin()
         {
-            int index = 8;
+            int index = 24;
             foreach (Button btn in this.panel1.Controls)
             {
                 if (btn.Text != "")
@@ -119,14 +116,16 @@ namespace WindowsFormsApp1
             ShuffleB();
         }
 
-        private void NewGame_Click(object sender, EventArgs e)
+
+        private void NewGameB_Click(object sender, EventArgs e)
         {
+            moveNumber = 0;
             ShuffleB();
         }
 
-        private void Menu_Click(object sender, EventArgs e)
+        private void MenuB_Click(object sender, EventArgs e)
         {
-            timer1.Stop(); //Stop the timer when exit the time and Go to Menu
+            timer1.Stop();
             this.Hide();
             Form1 f = new Form1();
             f.Closed += (s, args) => this.Close();
@@ -138,7 +137,7 @@ namespace WindowsFormsApp1
             _tick++;
         }
 
-        private void _3x3Game_Load(object sender, EventArgs e)
+        private void _5x5Game_Load(object sender, EventArgs e)
         {
             ShuffleB();
         }
