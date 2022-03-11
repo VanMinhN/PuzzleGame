@@ -121,6 +121,9 @@ namespace WindowsFormsApp1
 
         private void NewGame_Click(object sender, EventArgs e)
         {
+            timer1.Stop(); //stop the current time count
+            timer1.Start(); // restart the new time count
+            moveNumber = 0;
             ShuffleB();
         }
 
@@ -136,6 +139,11 @@ namespace WindowsFormsApp1
         private void timer1_Tick(object sender, EventArgs e)
         {
             _tick++;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void _3x3Game_Load(object sender, EventArgs e)

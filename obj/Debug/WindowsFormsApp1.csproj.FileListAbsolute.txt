@@ -12,3 +12,16 @@ C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1._4x4Game.resources
 C:\Users\Van Minh\source\repos\WindowsFormsApp1\obj\Debug\WindowsFormsApp1._5x5Game.resources
+D:\Project\PuzzleGame\bin\Debug\WindowsFormsApp1.exe.config
+D:\Project\PuzzleGame\bin\Debug\WindowsFormsApp1.exe
+D:\Project\PuzzleGame\bin\Debug\WindowsFormsApp1.pdb
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1._3x3Game.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1._4x4Game.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1._5x5Game.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.Mode.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.exe
+D:\Project\PuzzleGame\obj\Debug\WindowsFormsApp1.pdb

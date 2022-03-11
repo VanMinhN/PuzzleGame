@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
 			
             this.BackgroundImage = Properties.Resources.background_image;
             this.BackgroundImageLayout = ImageLayout.Stretch; //Fit the image to the window app
-         
         }
 
         private void Start_Click(object sender, EventArgs e)
@@ -28,10 +27,10 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
         //START BUTTON
-        private void button2_Click(object sender, EventArgs e)
+        private void Start_Button(object sender, EventArgs e)
         {
             this.Hide(); //Hide the current Form
             //Createt a new Form by create an instance of Mode
@@ -42,14 +41,14 @@ namespace WindowsFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult IExit = MessageBox.Show("Confirm if you want to exit","Puzzle game",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            DialogResult IExit = MessageBox.Show("X Button :Confirm if you want to exit","Puzzle game",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (IExit == DialogResult.No)
             {
                 e.Cancel = true;
             }
         }
         //EXIT BUTTON
-        private void button2_Click_1(object sender, EventArgs e)
+        private void Exit_Button(object sender, EventArgs e)
         {
             DialogResult IExit = MessageBox.Show("Confirm if you want to exit", "Puzzle game", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (IExit == DialogResult.Yes)
@@ -57,7 +56,6 @@ namespace WindowsFormsApp1
                 Application.ExitThread();
             }
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -70,6 +68,11 @@ namespace WindowsFormsApp1
                 + "The direction of the empty box is only allow to move up, down, left, and right. You can't move diagonal.\n\n"
                 + "The Winning condition: All the number must be arranged in ascending order.";
             MessageBox.Show(myTxt);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

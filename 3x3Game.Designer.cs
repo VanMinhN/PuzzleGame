@@ -62,6 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 388);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button9
             // 
@@ -214,7 +215,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label NoOfMovements;
         private System.Windows.Forms.Button NewGame;
-        private System.Windows.Forms.Button Menu;
+        private new System.Windows.Forms.Button Menu;
         private System.Windows.Forms.Timer timer1;
     }
 }

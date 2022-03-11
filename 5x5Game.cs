@@ -119,6 +119,8 @@ namespace WindowsFormsApp1
 
         private void NewGameB_Click(object sender, EventArgs e)
         {
+            timer1.Stop(); //stop the current time count
+            timer1.Start(); // restart the new time count
             moveNumber = 0;
             ShuffleB();
         }
