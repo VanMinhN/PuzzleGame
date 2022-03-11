@@ -13,6 +13,7 @@ This game has 2 modes easy(3x3), normal(4x4) and hard(5x5).
 Installation
 -----------------------------------
 Only require to have Visual Studio 2019 or above.
+
 <br>
 To run the application
 ----------------------
