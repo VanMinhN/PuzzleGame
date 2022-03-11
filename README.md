@@ -14,7 +14,6 @@ Installation
 -----------------------------------
 Only require to have Visual Studio 2019 or above.
 
-<br>
 To run the application
 ----------------------
 You can clone the repos with this command: <br/>
@@ -28,6 +27,5 @@ Demo (Youtube Link)
 -------------------
 Youtube: <br/>
 <a href="https://www.youtube.com/watch?v=4WnV9umflgs" target="_blank">
- <img src="https://img.youtube.com/vi/4WnV9umflgs/default.jpg" alt="Watch the video" width="360" height="240" border="10" />
+ <img src="https://img.youtube.com/vi/4WnV9umflgs/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
-https://www.youtube.com/watch?v=4WnV9umflgs
