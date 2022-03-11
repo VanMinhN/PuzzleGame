@@ -21,7 +21,7 @@ You can clone the repos with this command: <br/>
 ``git clone https://github.com/VanMinhN/PuzzleGame.git``
 <br/><br/>
 In order to play:
-Go to ./obj/Debug/WindowsFormsApp1.exe to play the game.
+Go to ./obj/Debug/WindowsFormsApp1.exe to play the game. <br>
 Have fun playing around with Puzzle Game
 
 Demo (Youtube Link)
