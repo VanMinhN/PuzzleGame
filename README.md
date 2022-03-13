@@ -22,7 +22,7 @@ You can clone the repos with this command: <br/>
 <br/><br/>
 In order to play:
 Go to ./obj/Debug/WindowsFormsApp1.exe to play the game. <br>
-Have fun playing around with Puzzle Game
+Have fun playing around with Puzzle Game.
 
 Demo (Youtube Link)
 -------------------
