@@ -8,7 +8,7 @@ About
 -----
 Hello, and welcome to Puzzle Game. This is a Visual Studio 2019 project using C# and WinForm. I build this application because I want to try and learn WinForm. I have a fun time playing around with WinForm. I hope that you find fun and enjoy playing with this small and simple Puzzle Game.
 
-This game has 2 modes easy(3x3), normal(4x4) and hard(5x5).
+This game has 3 modes easy(3x3), normal(4x4) and hard(5x5).
 
 
 Installation
