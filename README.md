@@ -27,6 +27,6 @@ Have fun playing around with Puzzle Game.
 Demo (Youtube Link)
 -------------------
 Youtube: <br/>
-<a href="https://www.youtube.com/watch?v=4WnV9umflgs" target="_blank">
+<a href="https://www.youtube.com/watch?v=4WnV9umflgs" target="_blank" rel="noreferrer noopener">
  <img src="https://img.youtube.com/vi/4WnV9umflgs/default.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
