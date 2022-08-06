@@ -1,5 +1,7 @@
 # PuzzleGame
-
+![](https://img.shields.io/badge/C%23-100%25-success)
+<br>
+<br>
 Description
 -----------
 PuzzleGame is an window application and coding in C# and Microsoft Studio with WinForms.<br>
